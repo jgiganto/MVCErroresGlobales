@@ -31,7 +31,7 @@ namespace MVCErroresGlobales
             //el objeto httpexception contiene los codigos de error http
             //almacenamos la accion donde deseamos enviar dependiendo de los errores http
             String accion = "";
-            switch (httpexception.ErrorCode)
+            switch (httpexception.GetHttpCode())
             {
                 case 404:
                     accion = "PaginaNoEncontrada";
